@@ -1,0 +1,53 @@
+<div class="row" *ngIf="currentUser">
+  <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+    <div>
+      <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+        <span>Operaciones</span>
+        <a class="d-flex align-items-center text-muted">
+          <i class="far fa-plus-square"></i>
+          <span data-feather="plus-circle"></span>
+        </a>
+      </h6>
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/quotes" routerLinkActive="active">
+            <i class="far fa-edit feather"></i>
+            <span data-feather="file"></span>
+            Cotizaciones
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/sales" routerLinkActive="active">
+            <i class="far fa-handshake feather"></i>
+            <span data-feather="home"></span>
+            Ventas <span class="sr-only">(current)</span>
+          </a>
+        </li>
+      </ul>
+
+      <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+        <span>Administración</span>
+        <a class="d-flex align-items-center text-muted">
+          <i class="far fa-plus-square"></i>
+          <span data-feather="plus-circle"></span>
+        </a>
+      </h6>
+      <ul class="nav flex-column mb-2">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/config" routerLinkActive="active">
+            <i class="fas fa-hammer feather"></i>
+            <span data-feather="file-text"></span>
+            Configuración
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://getbootstrap.com/docs/4.0/examples/" target="_blank">
+            <i class="fas fa-hands-helping feather"></i>
+            <span data-feather="file-text"></span>
+            Ayuda
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
