@@ -1,5 +1,5 @@
 # Pollo-source
 Repository for Pollo MVP
 
-Data:
-https://my-json-server.typicode.com/rodrigomatteo/Pollo-source
+Sample Data:
+http://localhost:9000/api/users
