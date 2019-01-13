@@ -1,5 +1,5 @@
 import {Request, Response} from 'express';
-import {USERS} from '../src/db-data';
+import {USERS} from './db-data';
 
 
 export function getAllUsers(req: Request, res: Response) {
