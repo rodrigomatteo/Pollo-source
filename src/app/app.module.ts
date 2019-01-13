@@ -10,7 +10,6 @@ import { fakeBackendProvider } from './helpers/fake-backend';
 import { AppComponent } from './app.component';
 import { routing }        from './app.routing';
 
-import { HeroService } from './hero.service';
 import { MessageService } from './message.service';
 import { MessageComponent } from './message/message.component';
 import { LoginComponent } from './login/login.component';
@@ -47,7 +46,6 @@ import { BillingComponent } from './billing/billing.component';
     ],
   bootstrap: [ AppComponent ],
   providers: [
-    HeroService, 
     MessageService, 
     AuthenticateService,
     // provider used to create fake backend
