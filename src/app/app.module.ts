@@ -10,11 +10,11 @@ import { fakeBackendProvider } from './helpers/fake-backend';
 import { AppComponent } from './app.component';
 import { routing }        from './app.routing';
 
-import { MessageService } from './message.service';
+import { MessageService } from './services/message.service';
 import { MessageComponent } from './message/message.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { AuthenticateService } from './authenticate.service';
+import { AuthenticateService } from './services/authenticate.service';
 import { HomeComponent } from './home/home.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { QuotesComponent } from './quotes/quotes.component';

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { AuthenticateService } from './authenticate.service'
+import { AuthenticateService } from './services/authenticate.service'
 import { User } from './models/user';
 
 @Component({
