@@ -10,8 +10,6 @@ import { fakeBackendProvider } from './helpers/fake-backend';
 import { AppComponent } from './app.component';
 import { routing }        from './app.routing';
 
-import { HeroesComponent } from './heroes/heroes.component';
-import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { HeroService } from './hero.service';
 import { MessageService } from './message.service';
 import { MessageComponent } from './message/message.component';
@@ -37,8 +35,6 @@ import { BillingComponent } from './billing/billing.component';
     ],
   declarations: [ 
     AppComponent, 
-    HeroesComponent, 
-    HeroDetailComponent, 
     MessageComponent, 
     LoginComponent, 
     RegisterComponent, 
