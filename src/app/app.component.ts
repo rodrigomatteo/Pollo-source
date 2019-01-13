@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import { AuthenticateService } from './authenticate.service'
-import { User } from './user';
+import { User } from './models/user';
 
 @Component({
   selector: 'my-app',
