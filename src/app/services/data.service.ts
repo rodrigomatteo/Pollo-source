@@ -6,11 +6,15 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class DataService {
-  url = "https://my-json-server.typicode.com/rodrigomatteo/Pollo-source";
+  url = "https://my-json-server.typicode.com/rodrigomatteo/Pollo-source/";
   
   constructor(private http: HttpClient) { }
 
   getAllUsers(): Observable<any>{
-    return this.http.get(this.url + "/users");
+    return this.http.get(this.url + "users");
+  }
+
+  getAllQuotes(): Observable<any> {
+    return this.http.get(this.url + 'quotes');
   }
 }

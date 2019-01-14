@@ -94,7 +94,7 @@
     [
         {
             "productId": 640,
-            "productNo": 6021003,
+            "productNo": "6021003",
             "name": "PROD 100010 MW020RCW W W40 ACCESSORIES W",
             "alias": "#15 3/8\" ZINC EXPANSION JOINT",
             "sellMeasureUnitCode": "PA",
@@ -107,7 +107,7 @@
           },
           {
             "productId": 5213,
-            "productNo": 6021003,
+            "productNo": "6021003",
             "name": "PROD 100010 MW020RCW W W40 ACCESSORIES W",
             "alias": "#15 3/8\" ZINC EXPANSION JOINT",
             "sellMeasureUnitCode": "PA",
@@ -120,7 +120,7 @@
           },
           {
             "productId": 402,
-            "productNo": 6024,
+            "productNo": "6024",
             "name": "DWT 250-20GA 2L 33MIL",
             "alias": "250T200-33",
             "sellMeasureUnitCode": "",
@@ -133,7 +133,7 @@
           },
           {
             "productId": 4975,
-            "productNo": 6024,
+            "productNo": "6024",
             "name": "DWT 250-20GA 2L 33MIL",
             "alias": "250T200-33",
             "sellMeasureUnitCode": "PC",
@@ -146,7 +146,7 @@
           },
           {
             "productId": 4559,
-            "productNo": 100006,
+            "productNo": "100006",
             "name": "2.5\" SLOTTED TRACK 20GA GALV",
             "alias": "2.5\" SLOTTED TRACK 20GA GALV",
             "sellMeasureUnitCode": "",
@@ -156,84 +156,50 @@
             "measureUnitCode": "",
             "length": null,
             "height": null
-          },
-          {
-            "productId": 9132,
-            "productNo": 100006,
-            "name": "2.5\" SLOTTED TRACK 20GA GALV",
-            "alias": "2.5\" SLOTTED TRACK 20GA GALV",
-            "sellMeasureUnitCode": "PC",
-            "weightUnitCode": "LB",
-            "weightUnitSecondCode": "MLF",
-            "weight": 616,
-            "measureUnitCode": "IN",
-            "length": null,
-            "height": 1
-          },
-          {
-            "productId": 12428,
-            "productNo": 4294328,
-            "name": "DWS 250 FG",
-            "alias": "#1 VINYL CORNERBD 10' 2.5\"WING TEST",
-            "sellMeasureUnitCode": "BDL",
-            "weightUnitCode": "LB",
-            "weightUnitSecondCode": "MLF",
-            "weight": 500,
-            "measureUnitCode": "FT",
-            "length": 10,
-            "height": 5
-          },
-          {
-            "productId": 12429,
-            "productNo": 4294329,
-            "name": "DWS 250 FG",
-            "alias": "#1 VINYL CORNERBD 10' 2.5\"WING TEST",
-            "sellMeasureUnitCode": "BDL",
-            "weightUnitCode": "LB",
-            "weightUnitSecondCode": "MLF",
-            "weight": 5,
-            "measureUnitCode": "FT",
-            "length": 10,
-            "height": 5
-          },
-          {
-            "productId": 12427,
-            "productNo": 6021088,
-            "name": "fg",
-            "alias": "fg",
-            "sellMeasureUnitCode": "",
-            "weightUnitCode": "LB",
-            "weightUnitSecondCode": "MLF",
-            "weight": 5,
-            "measureUnitCode": "",
-            "length": null,
-            "height": null
-          },
-          {
-            "productId": 4563,
-            "productNo": 100010,
-            "name": "PROD 100010 MWFG0RCW W W40 ACCESSORIES W",
-            "alias": "UDLT 2\"-20GA W/ 1.5L & 2.5L",
-            "sellMeasureUnitCode": "",
-            "weightUnitCode": "LB",
-            "weightUnitSecondCode": "",
-            "weight": 672,
-            "measureUnitCode": "",
-            "length": null,
-            "height": null
-          },
-          {
-            "productId": 9136,
-            "productNo": 100010,
-            "name": "PROD 100010 MWFG0RCW W W40 ACCESSORIES W",
-            "alias": "UDLT 2\"-20GA W/ 1.5L & 2.5L",
-            "sellMeasureUnitCode": "PC",
-            "weightUnitCode": "LB",
-            "weightUnitSecondCode": "MLF",
-            "weight": 672,
-            "measureUnitCode": "IN",
-            "length": 10,
-            "height": 0.02
           }
+    ],
+
+    "quotes" :
+    [
+        {
+            "firstName": "Rodrigo",
+            "lastName": "Matteo",
+            "customerName": "ZILLA",
+            "phone": "+1 (822) 469-3238",
+            "email":"ashleywilkinson@zilla.com",
+            "address":"302 Heath Place, Walker, Idaho, 4346",
+            "country":"Brazil",
+            "city":"Stewart",
+            "state":"Lima",
+            "items": [
+                {
+                    "line": 1,
+                    "productNo":"100006",
+                    "productName":"2.5\" SLOTTED TRACK 20GA GALV",
+                    "quantity": 10,
+                    "unitPrice": 1,
+                    "currency": "PEN",
+                    "total":10.00
+                },
+                {
+                    "line": 2,
+                    "productNo":"100006",
+                    "productName":"2.5\" SLOTTED TRACK 20GA GALV",
+                    "quantity": 10,
+                    "unitPrice": 1,
+                    "currency": "PEN",
+                    "total":10.00
+                },
+                {
+                    "line": 3,
+                    "productNo":"100006",
+                    "productName":"2.5\" SLOTTED TRACK 20GA GALV",
+                    "quantity": 10,
+                    "unitPrice": 1,
+                    "currency": "PEN",
+                    "total":10.00
+                }
+            ]
+        }
     ]
 }
