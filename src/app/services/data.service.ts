@@ -1,3 +1,4 @@
+import { Quote } from './../models/quote';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
@@ -14,7 +15,7 @@ export class DataService {
     return this.http.get(this.url + "users");
   }
 
-  getAllQuotes(): Observable<any> {
-    return this.http.get(this.url + 'quotes');
+  getAllQuotes(): Observable<Quote[]> {
+    return this.http.get<Quote[]>(this.url + 'quotes');
   }
 }

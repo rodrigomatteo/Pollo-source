@@ -185,19 +185,61 @@
                     "line": 2,
                     "productNo":"100006",
                     "productName":"2.5\" SLOTTED TRACK 20GA GALV",
-                    "quantity": 10,
-                    "unitPrice": 1,
+                    "quantity": 20,
+                    "unitPrice": 2,
                     "currency": "PEN",
-                    "total":10.00
+                    "total":20.00
                 },
                 {
                     "line": 3,
+                    "productNo":"100006",
+                    "productName":"2.5\" SLOTTED TRACK 20GA GALV",
+                    "quantity": 30,
+                    "unitPrice": 3,
+                    "currency": "PEN",
+                    "total":30.00
+                }
+            ]
+        }
+    ],
+
+    "sales" :
+    [
+        {
+            "billingType": "Factura",
+            "documentNo": "F001-1",
+            "customerName": "ZILLA",
+            "description": "loremp impsum",
+            "documentDate":"13/01/2019",
+            "term":"Contado",
+            "currency":"PEN",
+            "items": [
+                {
+                    "line": 1,
                     "productNo":"100006",
                     "productName":"2.5\" SLOTTED TRACK 20GA GALV",
                     "quantity": 10,
                     "unitPrice": 1,
                     "currency": "PEN",
                     "total":10.00
+                },
+                {
+                    "line": 2,
+                    "productNo":"100006",
+                    "productName":"2.5\" SLOTTED TRACK 20GA GALV",
+                    "quantity": 20,
+                    "unitPrice": 2,
+                    "currency": "PEN",
+                    "total":20.00
+                },
+                {
+                    "line": 3,
+                    "productNo":"100006",
+                    "productName":"2.5\" SLOTTED TRACK 20GA GALV",
+                    "quantity": 30,
+                    "unitPrice": 3,
+                    "currency": "PEN",
+                    "total":30.00
                 }
             ]
         }
