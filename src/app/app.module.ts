@@ -23,6 +23,7 @@ import { HeaderComponent } from './header/header.component';
 import { ConfigComponent } from './config/config.component';
 import { ProfileComponent } from './profile/profile.component';
 import { BillingComponent } from './billing/billing.component';
+import { DataService} from './services/data.service';
 
 @NgModule({
   imports: [ 
@@ -48,6 +49,7 @@ import { BillingComponent } from './billing/billing.component';
   providers: [
     MessageService, 
     AuthenticateService,
+    DataService,
     // provider used to create fake backend
     fakeBackendProvider
     ],
