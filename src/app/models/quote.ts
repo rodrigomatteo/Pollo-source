@@ -1,6 +1,8 @@
 export class Quote{
+    id: number;
     firstName: string;
     lastName: string;
+    dateCreated: string;
     customerName: string;
     phone: string;
     email: string;
@@ -12,6 +14,7 @@ export class Quote{
 }
 
 export class QuoteItem {
+    id: number;
     line: number;
     productNo: string;
     productName: string;

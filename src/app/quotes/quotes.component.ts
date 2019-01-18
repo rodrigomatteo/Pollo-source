@@ -1,6 +1,7 @@
 import { DataService } from './../services/data.service';
 import { Component, OnInit } from '@angular/core';
 import { Quote } from '../models/quote';
+import { Router } from '@angular/router'; 
 
 @Component({
   selector: 'app-quotes',
@@ -10,7 +11,12 @@ import { Quote } from '../models/quote';
 export class QuotesComponent implements OnInit {
   quotes: Quote[];
 
-  constructor(private dataService : DataService) { }
+  constructor(
+    private dataService : DataService,
+    private router : Router
+  ) { 
+
+  }
 
   ngOnInit() {
     this.dataService.getAllQuotes()
@@ -22,4 +28,7 @@ export class QuotesComponent implements OnInit {
       )
   }
 
+  cancelQuote(){
+    this.router.navigate(['quotes']);
+  }
 }
