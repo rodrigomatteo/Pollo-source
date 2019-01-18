@@ -19,6 +19,7 @@ const appRoutes: Routes = [
     { path: 'quotes', component: QuotesListComponent, canActivate: [AuthGuard] },
     { path: 'quotes/list', component: QuotesListComponent, canActivate: [AuthGuard] },
     { path: 'quotes/new', component: QuotesComponent, canActivate: [AuthGuard] },
+    { path: 'quotes/view', component: QuotesComponent, canActivate: [AuthGuard] },
     { path: 'sales', component: SalesComponent, canActivate: [AuthGuard] },
     { path: 'config', component: ConfigComponent, canActivate: [AuthGuard] },
     { path: 'billing', component: BillingComponent, canActivate: [AuthGuard] },
