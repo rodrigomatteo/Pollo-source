@@ -203,6 +203,31 @@
                     "total":30.00
                 }
             ]
+        },
+        {
+            "id" : 2,
+            "firstName": "Rodrigo",
+            "lastName": "Matteo",
+            "dateCreated" : "2019-01-19T03:27:16 -05:00",
+            "customerName": "ZILLA",
+            "phone": "+1 (822) 469-3238",
+            "email":"ashleywilkinson@zilla.com",
+            "address":"302 Heath Place, Walker, Idaho, 4346",
+            "country":"Brazil",
+            "city":"Stewart",
+            "state":"Lima",
+            "items": [
+                {
+                    "id": 1,
+                    "line": 1,
+                    "productNo":"100006",
+                    "productName":"2.5\" SLOTTED TRACK 20GA GALV",
+                    "quantity": 10,
+                    "unitPrice": 1,
+                    "currency": "PEN",
+                    "total":10.00
+                }
+            ]
         }
     ],
 

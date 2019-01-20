@@ -1,5 +1,5 @@
 import { DataService } from './../services/data.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import { Quote } from '../models/quote';
 import { Router } from '@angular/router'; 
 
@@ -9,26 +9,41 @@ import { Router } from '@angular/router';
   styleUrls: ['./quotes.component.css']
 })
 export class QuotesComponent implements OnInit {
-  quotes: Quote[];
+  quote: Quote;
+  isEdit: boolean;
+  isNew: boolean;
+  @ViewChild('firstName') firstName:ElementRef;
 
   constructor(
     private dataService : DataService,
     private router : Router
   ) { 
-
+    this.quote = new Quote();
+    this.isNew = this.router.url === '/quotes/new';
+    this.isEdit = this.isNew;
   }
 
   ngOnInit() {
-    this.dataService.getAllQuotes()
-      .subscribe(
-          data => {
-            this.quotes = data;
-            console.log(this.quotes);
-          }
-      )
+    if(!this.isNew){
+      this.getQuote(1);
+    }
+  }
+
+  ngAfterViewInit() {
+    setTimeout(() => this.firstName.nativeElement.focus());
   }
 
   cancelQuote(){
     this.router.navigate(['quotes']);
   }
+
+  getQuote(id: number){
+    this.dataService.getQuote(id)
+    .subscribe(
+        data => {
+          this.quote = data;
+          console.log(this.quote);
+        }
+    )
+}
 }

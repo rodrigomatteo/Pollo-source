@@ -20,6 +20,10 @@ export class DataService {
     return this.http.get<Quote[]>(this.url + 'quotes');
   }
 
+  getQuote(id: number): Observable<Quote>{
+    return this.http.get<Quote>(this.url + 'quotes/' + id);
+  }
+
   getAllSales(): Observable<Sale[]> {
     return this.http.get<Sale[]>(this.url + 'sales');
   }

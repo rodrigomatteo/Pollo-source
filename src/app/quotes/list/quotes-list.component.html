@@ -25,7 +25,7 @@
         <tbody>
           <ng-container *ngFor="let quote of quotes">
             <tr>
-                <td><a routerLink="/quotes/new">{{quote.id}}</a></td>
+                <td><a routerLink="/quotes/view/{{quote.id}}">{{quote.id}}</a></td>
                 <td>{{quote.firstName}}</td>
                 <td>{{quote.lastName}}</td>
                 <td>{{quote.dateCreated}}</td>
