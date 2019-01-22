@@ -25,6 +25,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { BillingComponent } from './billing/billing.component';
 import { DataService} from './services/data.service';
 import { QuotesListComponent } from './quotes/list/quotes-list.component';
+import { SalesListComponent } from './sales/list/sales-list.component';
 
 @NgModule({
   imports: [ 
@@ -44,7 +45,7 @@ import { QuotesListComponent } from './quotes/list/quotes-list.component';
     QuotesComponent, 
     SalesComponent, 
     HeaderComponent, 
-    ConfigComponent, ProfileComponent, BillingComponent, QuotesListComponent 
+    ConfigComponent, ProfileComponent, BillingComponent, QuotesListComponent, SalesListComponent 
     ],
   bootstrap: [ AppComponent ],
   providers: [
