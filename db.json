@@ -240,6 +240,7 @@
             "customerName": "ZILLA",
             "description": "loremp impsum",
             "documentDate":"13/01/2019",
+            "documentDue":"15/01/2019",
             "term":"Contado",
             "currency":"PEN",
             "items": [

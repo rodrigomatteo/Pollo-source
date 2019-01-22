@@ -5,6 +5,7 @@ export class Sale{
     customerName: string;
     description: string;
     documentDate: string;
+    documentDue: string;
     term: string;
     currency: string;
     items: SaleItem[]

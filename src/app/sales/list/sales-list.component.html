@@ -22,6 +22,16 @@
           </tr>
         </thead>
         <tbody>
+          <ng-container *ngFor="let sale of sales">
+            <tr>
+                <td><a routerLink="/sales/view/{{sale.id}}">{{sale.id}}</a></td>
+                <td>{{sale.documentNo}}</td>
+                <td>{{sale.customerName}}</td>
+                <td>{{sale.documentDate}}</td>
+                <td>{{sale.items.length}}</td>
+                <td>{{sale.items.length}}</td>
+              </tr>
+          </ng-container>          
       </tbody>
       </table>
     </div>      

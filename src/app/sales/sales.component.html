@@ -6,12 +6,12 @@
       <div class="btn-toolbar mb-2 mb-md-0">
         <div class="btn-group mr-2">
           <button class="btn btn-sm btn-outline-secondary">Guardar</button>
-          <button class="btn btn-sm btn-outline-secondary">Cancelar</button>
+          <button [disabled]="loading" class="btn btn-sm btn-outline-secondary" (click)="cancelSale()">Cancelar</button>
         </div>
       </div>
     </div>
 
-    <form class="needs-validation" novalidate="">
+    <form #saleForm="ngForm" class="needs-validation">
 
       <div class="row">
         <div class="col-md-9 mb-3">
@@ -23,7 +23,8 @@
         </div>
         <div class="col-md-2 mb-3">
           <div class="form-check form-check-inline">
-            <input type="text" class="form-control" id="number" placeholder="F001-1" value="" required="">
+            <div><span *ngIf="!isEdit">{{sale.documentNo}}</span></div>
+            <input type="text" *ngIf="isEdit" [(ngModel)]="sale.documentNo" class="form-control" id="number" name="number" placeholder="F001-1" value="" required="" #number>
           </div>
         </div>
       </div>
@@ -38,7 +39,8 @@
         <div class="col-md-6 mb-3">
         </div>
         <div class="col-md-3 mb-3">
-          <input type="text" class="form-control" id="date" placeholder="02/01/2018" value="" required="">
+          <div><span *ngIf="!isEdit">{{sale.documentDate}}</span></div>
+          <input type="text" *ngIf="isEdit" [(ngModel)]="sale.documentDate" class="form-control" id="documentDate" name="documentDate" placeholder="02/01/2018" value="" required="">
           <div class="invalid-feedback">Por favor seleccione una fecha</div>
         </div>
       </div>
@@ -46,8 +48,10 @@
       <div class="row">
         <div class="col-md-9 mb-3">
           <label for="customer">Cliente</label>
-          <select class="custom-select d-block w-100" id="customer" required="">
+          <div><span *ngIf="!isEdit">{{sale.customerName}}</span></div>
+          <select *ngIf="isEdit" [(ngModel)]="sale.customerName" class="custom-select d-block w-100" id="customerName" name="customerName" required="">
             <option value="">Seleccione...</option>
+            <option value="ZILLA">ZILLA</option>
           </select>
           <div class="invalid-feedback">
             Por favor seleccione a un cliente.
@@ -55,7 +59,8 @@
         </div>
         <div class="col-md-3 mb-3">
           <label for="term">Plazo</label>
-          <select class="custom-select d-block w-100" id="term" required="">
+          <div><span *ngIf="!isEdit">{{sale.term}}</span></div>
+          <select *ngIf="isEdit" [(ngModel)]="sale.term" class="custom-select d-block w-100" id="term" name="term" required="">
             <option value="">Seleccione...</option>
             <option value="">Contado</option>
             <option value="">8 días</option>
@@ -70,11 +75,13 @@
 
       <div class="row">
         <div class="col-md-9 mb-3">
-          <textarea class="form-control" aria-label="identificación" placeholder="identificación"></textarea>
+          <div><span *ngIf="!isEdit">{{sale.description}}</span></div>
+          <textarea *ngIf="isEdit" [(ngModel)]="sale.description" class="form-control" id="description" name="description" aria-label="identificación" placeholder="identificación"></textarea>
         </div>
         <div class="col-md-3 mb-3">
           <label for="expiration">Vencimiento</label>
-          <input type="text" class="form-control" id="expiration" placeholder="02/01/2018" value="" required="">
+          <div><span *ngIf="!isEdit">{{sale.documentDate}}</span></div>
+          <input type="text" *ngIf="isEdit" [(ngModel)]="sale.documentDate" class="form-control" id="expiration" name="expiration" placeholder="02/01/2018" value="" required="">
           <div class="invalid-feedback">Por favor seleccione un vencimiento</div>
         </div>
       </div>
@@ -84,7 +91,8 @@
         </div>
         <div class="col-md-3 mb-3">
           <label for="currency">Moneda</label>
-          <select class="custom-select d-block w-100" id="term" required="">
+          <div><span *ngIf="!isEdit">{{sale.currency}}</span></div>
+          <select *ngIf="isEdit" [(ngModel)]="sale.currency" class="custom-select d-block w-100" id="currency" name="currency" required="">
             <option value="">Seleccione...</option>
             <option value="">Soles</option>
             <option value="">Dolares</option>
@@ -102,10 +110,11 @@
           <thead>
             <tr>
               <th>#</th>
-              <th>Header</th>
-              <th>Header</th>
-              <th>Header</th>
-              <th>Header</th>
+              <th>Código</th>
+              <th>Cantidad</th>
+              <th>Precio Unitario</th>
+              <th>Moneda</th>
+              <th>Total</th>
             </tr>
           </thead>
           <tbody>

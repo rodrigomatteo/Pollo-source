@@ -1,5 +1,5 @@
 import { DataService } from './../services/data.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import { Sale } from './../models/sale';
 import { Router } from '@angular/router'; 
 
@@ -10,16 +10,32 @@ import { Router } from '@angular/router';
 })
 export class SalesComponent implements OnInit {
   sale: Sale;
-
+  isEdit: boolean;
+  isNew: boolean;
+  @ViewChild('number') number:ElementRef;
+  
   constructor(
     private dataService : DataService,
     private router : Router
   ) { 
     this.sale = new Sale();
-  }
+    this.isNew = this.router.url === '/sales/new';
+    this.isEdit = this.isNew;
+}
 
   ngOnInit() {
-    this.getSale(1);
+    if(!this.isNew){
+      this.getSale(1);
+    }
+  }
+
+  ngAfterViewInit() {
+    setTimeout(() => this.number.nativeElement.focus());
+  }
+  
+
+  cancelSale(){
+    this.router.navigate(['sales']);
   }
 
   getSale(id: number){
@@ -31,6 +47,4 @@ export class SalesComponent implements OnInit {
         }
     )
   }
-  
-
 }
