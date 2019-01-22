@@ -45,5 +45,5 @@ export class QuotesComponent implements OnInit {
           console.log(this.quote);
         }
     )
-}
+  }
 }

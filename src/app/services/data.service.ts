@@ -27,4 +27,9 @@ export class DataService {
   getAllSales(): Observable<Sale[]> {
     return this.http.get<Sale[]>(this.url + 'sales');
   }
+
+  getSale(id: number): Observable<Sale>{
+    return this.http.get<Sale>(this.url + 'sales/' + id);
+  }
+  
 }

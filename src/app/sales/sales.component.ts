@@ -1,6 +1,7 @@
 import { DataService } from './../services/data.service';
 import { Component, OnInit } from '@angular/core';
 import { Sale } from './../models/sale';
+import { Router } from '@angular/router'; 
 
 @Component({
   selector: 'app-sales',
@@ -8,18 +9,28 @@ import { Sale } from './../models/sale';
   styleUrls: ['./sales.component.css']
 })
 export class SalesComponent implements OnInit {
-  sales: Sale[];
+  sale: Sale;
 
-  constructor(private dataService : DataService) { }
+  constructor(
+    private dataService : DataService,
+    private router : Router
+  ) { 
+    this.sale = new Sale();
+  }
 
   ngOnInit() {
-    this.dataService.getAllSales()
+    this.getSale(1);
+  }
+
+  getSale(id: number){
+    this.dataService.getSale(id)
     .subscribe(
         data => {
-          this.sales = data;
-          console.log(this.sales);
+          this.sale = data;
+          console.log(this.sale);
         }
     )
-}
+  }
+  
 
 }

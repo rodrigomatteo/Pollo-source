@@ -1,4 +1,5 @@
 export class Sale{
+    id: number;
     billingType: string;
     documentNo: string;
     customerName: string;
