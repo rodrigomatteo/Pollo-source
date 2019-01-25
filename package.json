@@ -3,6 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
+    "@angular/cli": "~7.0.2",
+    "@angular/compiler-cli": "~7.0.0",
     "@angular/common": "^7.0.1",
     "@angular/compiler": "^7.0.1",
     "@angular/core": "^7.0.1",
@@ -12,7 +14,8 @@
     "@angular/router": "^7.0.1",
     "core-js": "^2.5.7",
     "rxjs": "^6.3.3",
-    "zone.js": "^0.8.26"
+    "zone.js": "^0.8.26",
+    "typescript": "~3.1.1"
   },
   "scripts": {
     "ng": "ng",
