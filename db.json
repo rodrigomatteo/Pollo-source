@@ -89,76 +89,7 @@
         "city": "Hayden"
         }
     ],
-/*
-    "products" :
-    [
-        {
-            "productId": 640,
-            "productNo": "6021003",
-            "name": "PROD 100010 MW020RCW W W40 ACCESSORIES W",
-            "alias": "#15 3/8\" ZINC EXPANSION JOINT",
-            "sellMeasureUnitCode": "PA",
-            "weightUnitCode": "LB",
-            "weightUnitSecondCode": "MLF",
-            "weight": 150,
-            "measureUnitCode": "FT",
-            "length": 5,
-            "height": 1
-          },
-          {
-            "productId": 5213,
-            "productNo": "6021003",
-            "name": "PROD 100010 MW020RCW W W40 ACCESSORIES W",
-            "alias": "#15 3/8\" ZINC EXPANSION JOINT",
-            "sellMeasureUnitCode": "PA",
-            "weightUnitCode": "LB",
-            "weightUnitSecondCode": "MLF",
-            "weight": 150,
-            "measureUnitCode": "FT",
-            "length": 5,
-            "height": null
-          },
-          {
-            "productId": 402,
-            "productNo": "6024",
-            "name": "DWT 250-20GA 2L 33MIL",
-            "alias": "250T200-33",
-            "sellMeasureUnitCode": "",
-            "weightUnitCode": "LB",
-            "weightUnitSecondCode": "MLF",
-            "weight": 741,
-            "measureUnitCode": "",
-            "length": null,
-            "height": null
-          },
-          {
-            "productId": 4975,
-            "productNo": "6024",
-            "name": "DWT 250-20GA 2L 33MIL",
-            "alias": "250T200-33",
-            "sellMeasureUnitCode": "PC",
-            "weightUnitCode": "LB",
-            "weightUnitSecondCode": "MLF",
-            "weight": 741,
-            "measureUnitCode": "IN",
-            "length": null,
-            "height": 0.033
-          },
-          {
-            "productId": 4559,
-            "productNo": "100006",
-            "name": "2.5\" SLOTTED TRACK 20GA GALV",
-            "alias": "2.5\" SLOTTED TRACK 20GA GALV",
-            "sellMeasureUnitCode": "",
-            "weightUnitCode": "LB",
-            "weightUnitSecondCode": "MLF",
-            "weight": 616,
-            "measureUnitCode": "",
-            "length": null,
-            "height": null
-          }
-    ],
-*/
+
     "countries":
     [
         {
@@ -172,30 +103,7 @@
             "name": "Brazil"
         }
     ],
-/*
-    "cities":
-    [
-        {
-            "id": 1,
-            "code": "LIM",
-            "name": "Lima"
-        },
-        {
-            "id": 2,
-            "code": "STW",
-            "name": "Stewart"
-        }
-    ],
 
-    "states":
-    [
-        {
-            "id": 1,
-            "code": "LIM",
-            "name": "Lima"
-        }
-    ],
-*/
     "quotes" :
     [
         {
