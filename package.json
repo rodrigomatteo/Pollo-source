@@ -21,7 +21,6 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "npm run build",
     "server": "./node_modules/.bin/ts-node -P ./server.tsconfig.json ./server.ts"
   },
   "devDependencies": {

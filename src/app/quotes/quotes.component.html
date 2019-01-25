@@ -32,7 +32,7 @@
 
       <div class="row">
         <div class="col-md-12 mb-3">
-          <label for="customer">Cliente / Organización</label>
+          <label for="customer">Cliente / Organizaci&oacute;n</label>
           <div><span *ngIf="!isEdit">{{quote.customerName}}</span></div>
           <input type="text" *ngIf="isEdit" [(ngModel)]="quote.customerName" class="form-control" id="customer" name="customer" placeholder="" value="" required="">
           <div class="invalid-feedback">
@@ -51,11 +51,11 @@
           </div>
         </div>
         <div class="col-md-6 mb-3">
-          <label for="email">Correo Electrónico <span class="text-muted">(Opcional)</span></label>
+          <label for="email">Correo Electr&oacute;nico <span class="text-muted">(Opcional)</span></label>
           <div><span *ngIf="!isEdit">{{quote.email}}</span></div>
           <input type="email" *ngIf="isEdit" [(ngModel)]="quote.email" class="form-control" id="email" name="email" placeholder="you@example.com">
           <div class="invalid-feedback">
-            Por favor ingrese una dirección de correo electrónico válida para alertas de envío.
+            Por favor ingrese una dirección de correo electr&oacute;nico válida para alertas de envío.
           </div>
         </div>
       </div>
@@ -64,22 +64,22 @@
       </div>
 
       <div class="mb-3">
-        <label for="address">Dirección - linea 1</label>
+        <label for="address">Direcci&oacute;n - linea 1</label>
         <div><span *ngIf="!isEdit">{{quote.address}}</span></div>
         <input type="text" *ngIf="isEdit" [(ngModel)]="quote.address" class="form-control" id="address" name="address" placeholder="1234 Calle Principal" required="">
         <div class="invalid-feedback">
-          Por favor ingrese una dirección de envío.
+          Por favor ingrese una direcci&oacute;n de envío.
         </div>
       </div>
 
       <div class="mb-3">
-        <label for="address2">Dirección - linea 2 <span class="text-muted">(Opcional)</span></label>
+        <label for="address2">Direcci&oacute;n - linea 2 <span class="text-muted">(Opcional)</span></label>
         <input type="text" *ngIf="isEdit" class="form-control" id="address2" placeholder="Nro de departamento o interior">
       </div>
 
       <div class="row">
         <div class="col-md-5 mb-3">
-          <label for="country">País</label>
+          <label for="country">Pa&iacute;s</label>
           <div><span *ngIf="!isEdit">{{quote.country}}</span></div>
           <select *ngIf="isEdit" [(ngModel)]="quote.country" class="custom-select d-block w-100" id="country" name="country" required="">
             <option value="">Seleccione...</option>
@@ -119,11 +119,11 @@
 
       <div class="custom-control custom-checkbox">
         <input type="checkbox" class="custom-control-input" id="same-address">
-        <label class="custom-control-label" for="same-address">Use la misma dirección para envío y facturación</label>
+        <label class="custom-control-label" for="same-address">Use la misma direcci&oacute;n para envío y facturaci&oacute;n</label>
       </div>
       <div class="custom-control custom-checkbox">
         <input type="checkbox" class="custom-control-input" id="save-info">
-        <label class="custom-control-label" for="save-info">Use la misma información para una siguiente cotización</label>
+        <label class="custom-control-label" for="save-info">Use la misma informaci&oacute;n para una siguiente cotizaci&oacute;n</label>
       </div>
       <hr class="mb-4">
 
@@ -134,7 +134,7 @@
           <thead>
             <tr>
               <th>#</th>
-              <th>Código</th>
+              <th>C&oacute;digo</th>
               <th>Cantidad</th>
               <th>Precio Unitario</th>
               <th>Moneda</th>
