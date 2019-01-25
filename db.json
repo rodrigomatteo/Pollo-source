@@ -159,6 +159,43 @@
           }
     ],
 
+    "countries":
+    [
+        {
+            "id": 1,
+            "code": "PER",
+            "name": "Perú"
+        },
+        {
+            "id": 2,
+            "code": "BRA",
+            "name": "Brazil"
+        }
+    ],
+
+    "cities":
+    [
+        {
+            "id": 1,
+            "code": "LIM",
+            "name": "Lima"
+        },
+        {
+            "id": 2,
+            "code": "STW",
+            "name": "Stewart"
+        }
+    ],
+
+    "states":
+    [
+        {
+            "id": 1,
+            "code": "LIM",
+            "name": "Lima"
+        }
+    ],
+
     "quotes" :
     [
         {
@@ -261,15 +298,6 @@
                     "unitPrice": 2,
                     "currency": "PEN",
                     "total":20.00
-                },
-                {
-                    "line": 3,
-                    "productNo":"100006",
-                    "productName":"2.5\" SLOTTED TRACK 20GA GALV",
-                    "quantity": 30,
-                    "unitPrice": 3,
-                    "currency": "PEN",
-                    "total":30.00
                 }
             ]
         }

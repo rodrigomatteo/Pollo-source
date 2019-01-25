@@ -1,3 +1,7 @@
+import { State } from './../models/state';
+import { City } from './../models/city';
+import { Country } from './../models/country';
+import { Product } from './../models/product';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
@@ -30,6 +34,22 @@ export class DataService {
 
   getSale(id: number): Observable<Sale>{
     return this.http.get<Sale>(this.url + 'sales/' + id);
+  }
+  
+  getAllProducts(){
+    return this.http.get<Product[]>(this.url + 'products');
+  }
+
+  getAllCountries(){
+    return this.http.get<Country[]>(this.url + 'countries');
+  }
+
+  getAllCities(){
+    return this.http.get<City[]>(this.url + 'cities');
+  }
+  
+  getAllStates(){
+    return this.http.get<State[]>(this.url + 'states');
   }
   
 }
