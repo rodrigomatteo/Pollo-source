@@ -8,10 +8,24 @@ export class Sale{
     documentDue: string;
     term: string;
     currency: string;
-    items: SaleItem[]
+    items: SaleItem[] = [];
+
+    addLine(id: number){
+        let item = new SaleItem();
+        item.id = id;
+        item.line = id;
+        item.quantity = 0;
+        item.unitPrice = 0;
+        item.currency = "PEN";
+        item.total = 0;
+        
+        this.items.push(item);
+    }
 }
 
+
 export class SaleItem {
+    id: number;
     line: number;
     productNo: string;
     productName: string;

@@ -17,8 +17,9 @@
             <th>Nombre</th>
             <th>Apellido</th>
             <th>Fecha</th>
-            <th>Cantidad</th>
-            <th>Precio</th>
+            <th class="text-right">Cantidad</th>
+            <th class="text-right">Precio</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -28,8 +29,9 @@
                 <td>{{sale.documentNo}}</td>
                 <td>{{sale.customerName}}</td>
                 <td>{{sale.documentDate}}</td>
-                <td>{{sale.items.length}}</td>
-                <td>{{sale.items.length}}</td>
+                <td class="text-right">{{sale.items.length}}</td>
+                <td class="text-right">{{sale.items.length}}</td>
+                <td><i class="fa fa-trash" style="color:blue" aria-hidden="true"></i></td>
               </tr>
           </ng-container>          
       </tbody>

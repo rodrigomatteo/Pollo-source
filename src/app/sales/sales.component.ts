@@ -19,6 +19,8 @@ export class SalesComponent implements OnInit {
     private router : Router
   ) { 
     this.sale = new Sale();
+    this.sale.addLine(1);
+    this.sale.addLine(2);
     this.isNew = this.router.url === '/sales/new';
     this.isEdit = this.isNew;
 }

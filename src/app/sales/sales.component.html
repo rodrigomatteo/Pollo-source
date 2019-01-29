@@ -121,11 +121,23 @@
             <ng-container *ngFor="let item of sale.items">
                 <tr>
                     <td>{{item.line}}</td>
-                    <td>{{item.productNo}}</td>
-                    <td>{{item.quantity}}</td>
-                    <td>{{item.unitPrice}}</td>
-                    <td>{{item.currency}}</td>
-                    <td>{{item.total}}</td>
+                    <td>
+                      <div><span *ngIf="!isEdit">{{item.productNo}}</span></div>
+                      <input type="text" *ngIf="isEdit" [(ngModel)]="item.productNo" class="form-control" id="productNo" name="productNo" required="">
+                    </td>
+                    <td>
+                      <div><span *ngIf="!isEdit">{{item.quantity}}</span></div>
+                      <input type="text" *ngIf="isEdit" [(ngModel)]="item.quantity" class="form-control text-right" id="quantity" name="quantity" required="">
+                    </td>
+                    <td>
+                      <div><span *ngIf="!isEdit">{{item.unitPrice}}</span></div>
+                      <input type="text" *ngIf="isEdit" [(ngModel)]="item.unitPrice" class="form-control text-right" id="unitPrice" name="unitPrice" required="">
+                    </td>
+                    <td>
+                      <div><span *ngIf="!isEdit">{{item.currency}}</span></div>
+                      <input type="text" *ngIf="isEdit" [(ngModel)]="item.currency" class="form-control" id="currency" name="currency" required="">
+                    </td>
+                    <td class="text-right">{{item.total}}</td>
                   </tr>
               </ng-container>          
           </tbody>
