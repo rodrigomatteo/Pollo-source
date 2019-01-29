@@ -10,7 +10,19 @@ export class Quote{
     country: string;
     city: string;
     state: string;
-    items: QuoteItem[]
+    items: QuoteItem[] = [];
+
+    addLine(id: number){
+        let item = new QuoteItem();
+        item.id = id;
+        item.line = id;
+        item.quantity = 0;
+        item.unitPrice = 0;
+        item.currency = "PEN";
+        item.total = 0;
+        
+        this.items.push(item);
+    }
 }
 
 export class QuoteItem {

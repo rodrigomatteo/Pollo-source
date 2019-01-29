@@ -19,6 +19,8 @@ export class QuotesComponent implements OnInit {
     private router : Router
   ) { 
     this.quote = new Quote();
+    this.quote.addLine(1);
+    this.quote.addLine(2);
     this.isNew = this.router.url === '/quotes/new';
     this.isEdit = this.isNew;
   }

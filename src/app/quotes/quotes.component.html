@@ -135,21 +135,33 @@
             <tr>
               <th>#</th>
               <th>C&oacute;digo</th>
-              <th>Cantidad</th>
-              <th>Precio Unitario</th>
+              <th class="text-right">Cantidad</th>
+              <th class="text-right">Precio Unitario</th>
               <th>Moneda</th>
-              <th>Total</th>
+              <th class="text-right">Total</th>
             </tr>
           </thead>
           <tbody *ngIf="quote">
             <ng-container *ngFor="let item of quote.items">
               <tr>
                   <td>{{item.line}}</td>
-                  <td>{{item.productNo}}</td>
-                  <td>{{item.quantity}}</td>
-                  <td>{{item.unitPrice}}</td>
-                  <td>{{item.currency}}</td>
-                  <td>{{item.total}}</td>
+                  <td>
+                    <div><span *ngIf="!isEdit">{{item.productNo}}</span></div>
+                    <input type="text" *ngIf="isEdit" [(ngModel)]="item.productNo" class="form-control" id="productNo" name="productNo" required="">
+                  </td>
+                  <td class="text-right">
+                    <div><span *ngIf="!isEdit">{{item.quantity}}</span></div>
+                    <input type="text" *ngIf="isEdit" [(ngModel)]="item.quantity" class="form-control text-right" id="quantity" name="quantity" required="">
+                  </td>
+                  <td class="text-right">
+                    <div><span *ngIf="!isEdit">{{item.unitPrice}}</span></div>
+                    <input type="text" *ngIf="isEdit" [(ngModel)]="item.unitPrice" class="form-control text-right" id="unitPrice" name="unitPrice" required="">
+                  </td>
+                  <td>
+                    <div><span *ngIf="!isEdit">{{item.currency}}</span></div>
+                    <input type="text" *ngIf="isEdit" [(ngModel)]="item.currency" class="form-control" id="currency" name="currency" required="">
+                  </td>
+                  <td class="text-right">{{item.total}}</td>
                 </tr>
             </ng-container>   
           </tbody>

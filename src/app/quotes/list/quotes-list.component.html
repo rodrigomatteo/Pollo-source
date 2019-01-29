@@ -14,23 +14,27 @@
       <table class="table table-striped table-sm">
         <thead>
           <tr>
+            <th></th>
             <th>#</th>
             <th>Nombre</th>
             <th>Apellido</th>
             <th>Fecha</th>
-            <th>Cantidad</th>
-            <th>Precio</th>
+            <th class="text-right">Cantidad</th>
+            <th class="text-right">Precio</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
           <ng-container *ngFor="let quote of quotes">
             <tr>
+                <td><input type="checkbox" id="cbox"><label for="cbox"></label></td>
                 <td><a routerLink="/quotes/view/{{quote.id}}">{{quote.id}}</a></td>
                 <td>{{quote.firstName}}</td>
                 <td>{{quote.lastName}}</td>
                 <td>{{quote.dateCreated}}</td>
-                <td>{{quote.items.length}}</td>
-                <td>{{quote.items.length}}</td>
+                <td class="text-right">{{quote.items.length}}</td>
+                <td class="text-right">{{quote.items.length}}</td>
+                <td><i class="fa fa-trash" style="color:blue" aria-hidden="true"></i></td>
               </tr>
           </ng-container>          
       </tbody>
