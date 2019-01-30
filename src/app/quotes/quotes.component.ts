@@ -12,7 +12,7 @@ export class QuotesComponent implements OnInit {
   quote: Quote;
   isEdit: boolean;
   isNew: boolean;
-  @ViewChild('firstName') firstName:ElementRef;
+  @ViewChild('fName') fName:ElementRef;
 
   constructor(
     private dataService : DataService,
@@ -32,7 +32,7 @@ export class QuotesComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    setTimeout(() => this.firstName.nativeElement.focus());
+    setTimeout(() => this.fName.nativeElement.focus());
   }
 
   cancelQuote(){
@@ -47,5 +47,9 @@ export class QuotesComponent implements OnInit {
           console.log(this.quote);
         }
     )
+  }
+
+  onSubmit() {
+    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.quote))
   }
 }

@@ -1,29 +1,29 @@
 <div class="row">
   <div class="col-md-10 order-md-1">
-    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-      <h1 class="h2">Cotizaciones</h1>
-      <div class="btn-toolbar mb-2 mb-md-0">
-        <div class="btn-group mr-2">
-          <button class="btn btn-sm btn-outline-secondary">Guardar</button>
-          <button class="btn btn-sm btn-outline-secondary" (click)="cancelQuote()">Cancelar</button>
-        </div>
-      </div>
-    </div>
 
-    <form #quoteForm="ngForm" class="needs-validation">
-      <div class="row">
+    <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+          <h1 class="h2">Cotizaciones</h1>
+          <div class="btn-toolbar mb-2 mb-md-0">
+            <div class="btn-group mr-2">
+              <button type="submit" class="btn btn-sm btn-outline-primary">Guardar</button>
+              <button class="btn btn-sm btn-outline-secondary" (click)="cancelQuote()">Cancelar</button>
+            </div>
+          </div>
+        </div>
+        <div class="row">
         <div class="col-md-6 mb-3">
           <label for="firstName">Nombre</label>
           <div><span *ngIf="!isEdit">{{quote.firstName}}</span></div>
-          <input type="text" *ngIf="isEdit" [(ngModel)]="quote.firstName" class="form-control" id="firstName" name="firstName" placeholder="" value="" required="" #firstName>
-          <div class="invalid-feedback">
-            Por favor ingrese un nombre.
+          <input type="text" class="form-control" id="firstName" name="firstName" [(ngModel)]="quote.firstName" #fName #name="ngModel" required />
+          <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+            <div *ngIf="name.errors.required">Por favor ingrese el nombre.</div>
           </div>
         </div>
         <div class="col-md-6 mb-3">
           <label for="lastName">Apellidos</label>
           <div><span *ngIf="!isEdit">{{quote.lastName}}</span></div>
-          <input type="text" *ngIf="isEdit" [(ngModel)]="quote.lastName" class="form-control" id="lastName" name="lastName" placeholder="" value="" required="">
+          <input type="text" *ngIf="isEdit" [(ngModel)]="quote.lastName" class="form-control" id="lastName" name="lastName" placeholder="" value="" >
           <div class="invalid-feedback">
             Por favor ingrese los apellidos.
           </div>
@@ -34,7 +34,7 @@
         <div class="col-md-12 mb-3">
           <label for="customer">Cliente / Organizaci&oacute;n</label>
           <div><span *ngIf="!isEdit">{{quote.customerName}}</span></div>
-          <input type="text" *ngIf="isEdit" [(ngModel)]="quote.customerName" class="form-control" id="customer" name="customer" placeholder="" value="" required="">
+          <input type="text" *ngIf="isEdit" [(ngModel)]="quote.customerName" class="form-control" id="customer" name="customer" placeholder="" value="" >
           <div class="invalid-feedback">
             Por favor ingrese un cliente.
           </div>
@@ -45,7 +45,7 @@
         <div class="col-md-6 mb-3">
           <label for="phone">Teléfono</label>
           <div><span *ngIf="!isEdit">{{quote.phone}}</span></div>
-          <input type="text" *ngIf="isEdit" [(ngModel)]="quote.phone" class="form-control" id="phone" name="phone" placeholder="51 1 2568754" value="" required="">
+          <input type="text" *ngIf="isEdit" [(ngModel)]="quote.phone" class="form-control" id="phone" name="phone" placeholder="51 1 2568754" value="" >
           <div class="invalid-feedback">
             Por favor ingrese un teléfono válido.
           </div>
@@ -66,7 +66,7 @@
       <div class="mb-3">
         <label for="address">Direcci&oacute;n - linea 1</label>
         <div><span *ngIf="!isEdit">{{quote.address}}</span></div>
-        <input type="text" *ngIf="isEdit" [(ngModel)]="quote.address" class="form-control" id="address" name="address" placeholder="1234 Calle Principal" required="">
+        <input type="text" *ngIf="isEdit" [(ngModel)]="quote.address" class="form-control" id="address" name="address" placeholder="1234 Calle Principal" >
         <div class="invalid-feedback">
           Por favor ingrese una direcci&oacute;n de envío.
         </div>
@@ -81,7 +81,7 @@
         <div class="col-md-5 mb-3">
           <label for="country">Pa&iacute;s</label>
           <div><span *ngIf="!isEdit">{{quote.country}}</span></div>
-          <select *ngIf="isEdit" [(ngModel)]="quote.country" class="custom-select d-block w-100" id="country" name="country" required="">
+          <select *ngIf="isEdit" [(ngModel)]="quote.country" class="custom-select d-block w-100" id="country" name="country" >
             <option value="">Seleccione...</option>
             <option>Perú</option>
             <option>Brazil</option>
@@ -93,7 +93,7 @@
         <div class="col-md-4 mb-3">
           <label for="state">Ciudad</label>
           <div><span *ngIf="!isEdit">{{quote.city}}</span></div>
-          <select *ngIf="isEdit" [(ngModel)]="quote.city" class="custom-select d-block w-100" id="city" name="city" required="">
+          <select *ngIf="isEdit" [(ngModel)]="quote.city" class="custom-select d-block w-100" id="city" name="city" >
             <option value="">Seleccione...</option>
             <option>Lima</option>
             <option>Stewart</option>
@@ -105,7 +105,7 @@
         <div class="col-md-3 mb-3">
           <label for="province">Provincia</label>
           <div><span *ngIf="!isEdit">{{quote.state}}</span></div>
-          <select *ngIf="isEdit" [(ngModel)]="quote.state" class="custom-select d-block w-100" id="state" name="state" required="">
+          <select *ngIf="isEdit" [(ngModel)]="quote.state" class="custom-select d-block w-100" id="state" name="state" >
             <option value="">Seleccione...</option>
             <option>Lima</option>
           </select>
@@ -147,19 +147,19 @@
                   <td>{{item.line}}</td>
                   <td>
                     <div><span *ngIf="!isEdit">{{item.productNo}}</span></div>
-                    <input type="text" *ngIf="isEdit" [(ngModel)]="item.productNo" class="form-control" id="productNo" name="productNo" required="">
+                    <input type="text" *ngIf="isEdit" [(ngModel)]="item.productNo" class="form-control" id="productNo" name="productNo" >
                   </td>
                   <td class="text-right">
                     <div><span *ngIf="!isEdit">{{item.quantity}}</span></div>
-                    <input type="text" *ngIf="isEdit" [(ngModel)]="item.quantity" class="form-control text-right" id="quantity" name="quantity" required="">
+                    <input type="text" *ngIf="isEdit" [(ngModel)]="item.quantity" class="form-control text-right" id="quantity" name="quantity" >
                   </td>
                   <td class="text-right">
                     <div><span *ngIf="!isEdit">{{item.unitPrice}}</span></div>
-                    <input type="text" *ngIf="isEdit" [(ngModel)]="item.unitPrice" class="form-control text-right" id="unitPrice" name="unitPrice" required="">
+                    <input type="text" *ngIf="isEdit" [(ngModel)]="item.unitPrice" class="form-control text-right" id="unitPrice" name="unitPrice" >
                   </td>
                   <td>
                     <div><span *ngIf="!isEdit">{{item.currency}}</span></div>
-                    <input type="text" *ngIf="isEdit" [(ngModel)]="item.currency" class="form-control" id="currency" name="currency" required="">
+                    <input type="text" *ngIf="isEdit" [(ngModel)]="item.currency" class="form-control" id="currency" name="currency" >
                   </td>
                   <td class="text-right">{{item.total}}</td>
                 </tr>
