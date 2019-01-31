@@ -15,15 +15,15 @@
         <div class="col-md-6 mb-3">
           <label for="firstName">Nombre</label>
           <input type="text" [ngClass]="{'form-control': isNew, 'form-control-plaintext': !isNew}" id="firstName" name="firstName" [(ngModel)]="quote.firstName" #fName #name="ngModel" required />
-          <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+          <div *ngIf="f.submitted && name.invalid" class="alert alert-danger">
             <div *ngIf="name.errors.required">Por favor ingrese el nombre.</div>
           </div>
         </div>
         <div class="col-md-6 mb-3">
           <label for="lastName">Apellidos</label>
-          <input type="text" [ngClass]="{'form-control': isNew, 'form-control-plaintext': !isNew}" [(ngModel)]="quote.lastName" id="lastName" name="lastName" />
-          <div class="invalid-feedback">
-            Por favor ingrese los apellidos.
+          <input type="text" [ngClass]="{'form-control': isNew, 'form-control-plaintext': !isNew}" id="lastName" name="lastName" [(ngModel)]="quote.lastName" #lName="ngModel" required />
+          <div *ngIf="f.submitted && lName.invalid" class="alert alert-danger">
+            <div *ngIf="lName.errors.required">Por favor ingrese los apellidos.</div>
           </div>
         </div>
       </div>
@@ -31,9 +31,9 @@
       <div class="row">
         <div class="col-md-12 mb-3">
           <label for="customer">Cliente / Organizaci&oacute;n</label>
-          <input type="text" [ngClass]="{'form-control': isNew, 'form-control-plaintext': !isNew}" [(ngModel)]="quote.customerName" id="customer" name="customer" />
-          <div class="invalid-feedback">
-            Por favor ingrese un cliente.
+          <input type="text" [ngClass]="{'form-control': isNew, 'form-control-plaintext': !isNew}" id="customer" name="customer" [(ngModel)]="quote.customerName" #customer="ngModel" required />
+          <div *ngIf="f.submitted && customer.invalid" class="alert alert-danger">
+            <div *ngIf="customer.errors.required">Por favor ingrese un cliente.</div>
           </div>
         </div>
       </div>
@@ -41,16 +41,16 @@
       <div class="row">
         <div class="col-md-6 mb-3">
           <label for="phone">Teléfono</label>
-          <input type="text" [ngClass]="{'form-control': isNew, 'form-control-plaintext': !isNew}" [(ngModel)]="quote.phone"  id="phone" name="phone" placeholder="51 1 2568754" />
-          <div class="invalid-feedback">
-            Por favor ingrese un teléfono válido.
+          <input type="text" [ngClass]="{'form-control': isNew, 'form-control-plaintext': !isNew}" id="phone" name="phone" [(ngModel)]="quote.phone" #phone="ngModel" placeholder="51 1 2568754" required />
+          <div *ngIf="f.submitted && phone.invalid" class="alert alert-danger">
+            <div *ngIf="phone.errors.required">Por favor ingrese un tel&eacute;fono.</div>
           </div>
         </div>
         <div class="col-md-6 mb-3">
           <label for="email">Correo Electr&oacute;nico <span class="text-muted">(Opcional)</span></label>
-          <input type="email" [ngClass]="{'form-control': isNew, 'form-control-plaintext': !isNew}" [(ngModel)]="quote.email" id="email" name="email" placeholder="you@example.com" />
-          <div class="invalid-feedback">
-            Por favor ingrese una dirección de correo electr&oacute;nico válida para alertas de envío.
+          <input type="email" [ngClass]="{'form-control': isNew, 'form-control-plaintext': !isNew}" id="email" name="email" [(ngModel)]="quote.email" #email="ngModel" placeholder="you@example.com" email />
+          <div *ngIf="f.submitted && email.invalid">
+            <div *ngIf="email.errors.email" class="alert alert-danger">Por favor ingrese un correo electr&oacute;nico válido.</div>
           </div>
         </div>
       </div>
@@ -60,9 +60,9 @@
 
       <div class="mb-3">
         <label for="address">Direcci&oacute;n - linea 1</label>
-        <input type="text" [ngClass]="{'form-control': isNew, 'form-control-plaintext': !isNew}" [(ngModel)]="quote.address" id="address" name="address" placeholder="1234 Calle Principal" />
-        <div class="invalid-feedback">
-          Por favor ingrese una direcci&oacute;n de envío.
+        <input type="text" [ngClass]="{'form-control': isNew, 'form-control-plaintext': !isNew}" id="address" name="address" [(ngModel)]="quote.address" #address1="ngModel" placeholder="1234 Calle Principal" required />
+        <div *ngIf="f.submitted && address1.invalid" class="alert alert-danger">
+          <div *ngIf="address1.errors.required">Por favor ingrese una direcci&oacute;n de env&iacute;o.</div>
         </div>
       </div>
 
