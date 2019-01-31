@@ -13,6 +13,7 @@ import { Sale } from './../models/sale';
 })
 export class DataService {
   url = "https://my-json-server.typicode.com/rodrigomatteo/Pollo-source/";
+  //url = "http://localhost:3000/";
   
   constructor(private http: HttpClient) { }
 
