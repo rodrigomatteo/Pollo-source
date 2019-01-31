@@ -1,17 +1,16 @@
 <div class="row">
   <div class="col-md-10 order-md-1">
 
-    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-      <h1 class="h2">Ventas</h1>
-      <div class="btn-toolbar mb-2 mb-md-0">
-        <div class="btn-group mr-2">
-          <button class="btn btn-sm btn-outline-secondary">Guardar</button>
-          <button class="btn btn-sm btn-outline-secondary" (click)="cancelSale()">Cancelar</button>
+    <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Ventas</h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+          <div class="btn-group mr-2">
+            <button type="submit" class="btn btn-sm btn-outline-primary">Guardar</button>
+            <button class="btn btn-sm btn-outline-secondary" (click)="cancelSale()">Cancelar</button>
+          </div>
         </div>
       </div>
-    </div>
-
-    <form #saleForm="ngForm" class="needs-validation">
 
       <div class="row">
         <div class="col-md-9 mb-3">
@@ -23,8 +22,10 @@
         </div>
         <div class="col-md-2 mb-3">
           <div class="form-check form-check-inline">
-            <div><span *ngIf="!isEdit">{{sale.documentNo}}</span></div>
-            <input type="text" *ngIf="isEdit" [(ngModel)]="sale.documentNo" class="form-control" id="number" name="number" placeholder="F001-1" value="" required="" #number>
+            <input type="text" [ngClass]="{'form-control': isNew, 'form-control-plaintext': !isNew}" [(ngModel)]="sale.documentNo" id="number" name="number" placeholder="F001-1" #number #docNo="ngModel" required />
+          </div>
+          <div *ngIf="f.submitted && docNo.invalid" class="alert-danger">
+            <div *ngIf="docNo.errors.required">Favor ingrese n&uacute;mero de factura</div>
           </div>
         </div>
       </div>
@@ -39,50 +40,49 @@
         <div class="col-md-6 mb-3">
         </div>
         <div class="col-md-3 mb-3">
-          <div><span *ngIf="!isEdit">{{sale.documentDate}}</span></div>
-          <input type="text" *ngIf="isEdit" [(ngModel)]="sale.documentDate" class="form-control" id="documentDate" name="documentDate" placeholder="02/01/2018" value="" required="">
-          <div class="invalid-feedback">Por favor seleccione una fecha</div>
+          <input type="text" [ngClass]="{'form-control': isNew, 'form-control-plaintext': !isNew}" [(ngModel)]="sale.documentDate" id="documentDate" name="documentDate" placeholder="02/01/2018" #documentDate="ngModel" required />
+          <div *ngIf="f.submitted && documentDate.invalid" class="alert-danger">
+            <div *ngIf="documentDate.errors.required">Favor ingrese fecha</div>
+          </div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-md-9 mb-3">
           <label for="customer">Cliente</label>
-          <div><span *ngIf="!isEdit">{{sale.customerName}}</span></div>
-          <select *ngIf="isEdit" [(ngModel)]="sale.customerName" class="custom-select d-block w-100" id="customerName" name="customerName" required="">
+          <select [ngClass]="{'w-100': true, 'form-control': isNew, 'form-control-plaintext': !isNew}" [(ngModel)]="sale.customerName" id="customerName" name="customerName" #customerName="ngModel" required >
             <option value="">Seleccione...</option>
             <option value="ZILLA">ZILLA</option>
           </select>
-          <div class="invalid-feedback">
-            Por favor seleccione a un cliente.
+          <div *ngIf="f.submitted && customerName.invalid" class="alert-danger">
+            <div *ngIf="customerName.errors.required">Favor seleccione un cliente</div>
           </div>
         </div>
         <div class="col-md-3 mb-3">
           <label for="term">Plazo</label>
-          <div><span *ngIf="!isEdit">{{sale.term}}</span></div>
-          <select *ngIf="isEdit" [(ngModel)]="sale.term" class="custom-select d-block w-100" id="term" name="term" required="">
+          <select [ngClass]="{'w-100': true, 'form-control': isNew, 'form-control-plaintext': !isNew}" [(ngModel)]="sale.term" id="term" name="term" #term="ngModel" required >
             <option value="">Seleccione...</option>
-            <option value="">Contado</option>
-            <option value="">8 días</option>
-            <option value="">30 días</option>
-            <option value="">Indefinido</option>
+            <option value="Contado">Contado</option>
+            <option value="8">8 días</option>
+            <option value="30">30 días</option>
+            <option value="Indefinido">Indefinido</option>
           </select>
-          <div class="invalid-feedback">
-            Por favor seleccione a un cliente.
+          <div *ngIf="f.submitted && term.invalid" class="alert-danger">
+            <div *ngIf="term.errors.required">Favor seleccione un plazo</div>
           </div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-md-9 mb-3">
-          <div><span *ngIf="!isEdit">{{sale.description}}</span></div>
-          <textarea *ngIf="isEdit" [(ngModel)]="sale.description" class="form-control" id="description" name="description" aria-label="identificacion" placeholder="identificaci&oacute;n"></textarea>
+          <textarea [ngClass]="{'form-control': isNew, 'form-control-plaintext': !isNew}" [(ngModel)]="sale.description" id="description" name="description" aria-label="identificacion" placeholder="identificaci&oacute;n" ></textarea>
         </div>
         <div class="col-md-3 mb-3">
           <label for="expiration">Vencimiento</label>
-          <div><span *ngIf="!isEdit">{{sale.documentDate}}</span></div>
-          <input type="text" *ngIf="isEdit" [(ngModel)]="sale.documentDate" class="form-control" id="expiration" name="expiration" placeholder="02/01/2018" value="" required="">
-          <div class="invalid-feedback">Por favor seleccione un vencimiento</div>
+          <input type="text" [ngClass]="{'form-control': isNew, 'form-control-plaintext': !isNew}" [(ngModel)]="sale.documentDate" id="expiration" name="expiration" placeholder="02/01/2018" #expiration="ngModel" required>
+          <div *ngIf="f.submitted && expiration.invalid" class="alert-danger">
+            <div *ngIf="expiration.errors.required">Favor ingrese un vencimiento</div>
+          </div>
         </div>
       </div>
 
@@ -91,13 +91,14 @@
         </div>
         <div class="col-md-3 mb-3">
           <label for="currency">Moneda</label>
-          <div><span *ngIf="!isEdit">{{sale.currency}}</span></div>
-          <select *ngIf="isEdit" [(ngModel)]="sale.currency" class="custom-select d-block w-100" id="currency" name="currency" required="">
+          <select [ngClass]="{'w-100': true, 'form-control': isNew, 'form-control-plaintext': !isNew}" [(ngModel)]="sale.currency" id="currency" name="currency" #currency="ngModel" required>
             <option value="">Seleccione...</option>
-            <option value="">Soles</option>
-            <option value="">Dolares</option>
+            <option value="USD">Dolares</option>
+            <option value="PEN">Soles</option>
           </select>
-          <div class="invalid-feedback">Por favor seleccione una moneda</div>
+          <div *ngIf="f.submitted && currency.invalid" class="alert-danger">
+            <div *ngIf="currency.errors.required">Favor seleccione una moneda</div>
+          </div>
         </div>
       </div>
 
@@ -113,7 +114,6 @@
               <th>C&oacute;digo</th>
               <th>Cantidad</th>
               <th>Precio Unitario</th>
-              <th>Moneda</th>
               <th>Total</th>
             </tr>
           </thead>
@@ -122,20 +122,22 @@
                 <tr>
                     <td>{{item.line}}</td>
                     <td>
-                      <div><span *ngIf="!isEdit">{{item.productNo}}</span></div>
-                      <input type="text" *ngIf="isEdit" [(ngModel)]="item.productNo" class="form-control" id="productNo" name="productNo" required="">
+                      <input type="text" [ngClass]="{'form-control': isNew, 'form-control-plaintext': !isNew}" [(ngModel)]="item.productNo" id="productNo" name="productNo" #productNo="ngModel" required />
+                      <div *ngIf="f.submitted && productNo.invalid" class="alert-danger">
+                        <div *ngIf="productNo.errors.required">Favor seleccione un producto</div>
+                      </div>
                     </td>
                     <td>
-                      <div><span *ngIf="!isEdit">{{item.quantity}}</span></div>
-                      <input type="text" *ngIf="isEdit" [(ngModel)]="item.quantity" class="form-control text-right" id="quantity" name="quantity" required="">
+                      <input type="text" [ngClass]="{'text-right': true, 'form-control': isNew, 'form-control-plaintext': !isNew}" [(ngModel)]="item.quantity" id="quantity" name="quantity" #quantity="ngModel" required />
+                      <div *ngIf="f.submitted && quantity.invalid" class="alert-danger">
+                        <div *ngIf="quantity.errors.required">Favor ingrese una cantidad</div>
+                      </div>
                     </td>
                     <td>
-                      <div><span *ngIf="!isEdit">{{item.unitPrice}}</span></div>
-                      <input type="text" *ngIf="isEdit" [(ngModel)]="item.unitPrice" class="form-control text-right" id="unitPrice" name="unitPrice" required="">
-                    </td>
-                    <td>
-                      <div><span *ngIf="!isEdit">{{item.currency}}</span></div>
-                      <input type="text" *ngIf="isEdit" [(ngModel)]="item.currency" class="form-control" id="currency" name="currency" required="">
+                      <input type="text" [ngClass]="{'text-right': true, 'form-control': isNew, 'form-control-plaintext': !isNew}" [(ngModel)]="item.unitPrice" id="unitPrice" name="unitPrice" #unitPrice="ngModel" required />
+                      <div *ngIf="f.submitted && unitPrice.invalid" class="alert-danger">
+                        <div *ngIf="unitPrice.errors.required">Favor ingrese una cantidad</div>
+                      </div>
                     </td>
                     <td class="text-right">{{item.total}}</td>
                   </tr>

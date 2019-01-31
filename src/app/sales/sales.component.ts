@@ -20,7 +20,6 @@ export class SalesComponent implements OnInit {
   ) { 
     this.sale = new Sale();
     this.sale.addLine(1);
-    this.sale.addLine(2);
     this.isNew = this.router.url === '/sales/new';
     this.isEdit = this.isNew;
 }
@@ -48,5 +47,9 @@ export class SalesComponent implements OnInit {
           console.log(this.sale);
         }
     )
+  }
+
+  onSubmit(){
+    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.sale))
   }
 }
