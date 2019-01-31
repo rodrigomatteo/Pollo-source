@@ -1,213 +1,213 @@
 {
-    "users":
-    [
-        {
-            "id": 1,
-            "firstName": "Rodrigo",
-            "lastName": "Matteo",
-            "userName": "rodrigo.matteo",
-            "password": "haceme1pt"
-        },
-        {
-            "id": 2,
-            "firstName": "Roger",
-            "lastName": "Bobbio",
-            "userName": "roger.bobbio",
-            "password": "hacele1pt"
-        },
-    
-        {
-            "id": 3,
-            "firstName": "Israel",
-            "lastName": "Nizama",
-            "userName": "israel.nizama",
-            "password": "hacele1pt"
-        }
-   
-    ],
+  "users":
+  [
+      {
+          "id": 1,
+          "firstName": "Rodrigo",
+          "lastName": "Matteo",
+          "userName": "rodrigo.matteo",
+          "password": "haceme1pt"
+      },
+      {
+          "id": 2,
+          "firstName": "Roger",
+          "lastName": "Bobbio",
+          "userName": "roger.bobbio",
+          "password": "hacele1pt"
+      },
+  
+      {
+          "id": 3,
+          "firstName": "Israel",
+          "lastName": "Nizama",
+          "userName": "israel.nizama",
+          "password": "hacele1pt"
+      }
+ 
+  ],
 
-    "customers" : 
-    [
-        {
-        "_id": "5c3810998d8ad23011fbd494",
-        "isActive": false,
-        "picture": "http://placehold.it/32x32",
-        "contact": "Mejia Glover",
-        "companyName": "ZILLA",
-        "email": "mejiaglover@zilla.com",
-        "phone": "+1 (972) 488-3455",
-        "address": "837 Grove Street, Bellamy, Rhode Island, 5678",
-        "country": "Uruguay",
-        "city": "Alfarata"
-        },
-        {
-        "_id": "5c381099a89608962568fccc",
-        "isActive": false,
-        "picture": "http://placehold.it/32x32",
-        "contact": "Trevino Daniels",
-        "companyName": "DELPHIDE",
-        "email": "trevinodaniels@delphide.com",
-        "phone": "+1 (933) 483-2164",
-        "address": "494 Vanderbilt Avenue, Savage, South Carolina, 5650",
-        "country": "Kyrgyzstan",
-        "city": "Stewart"
-        },
-        {
-        "_id": "5c38109946bac457f8070309",
-        "isActive": false,
-        "picture": "http://placehold.it/32x32",
-        "contact": "Ashley Wilkinson",
-        "companyName": "FLOTONIC",
-        "email": "ashleywilkinson@flotonic.com",
-        "phone": "+1 (838) 546-3183",
-        "address": "302 Heath Place, Walker, Idaho, 4346",
-        "country": "Algeria",
-        "city": "Gibsonia"
-        },
-        {
-        "_id": "5c38109912fece3e09e7f010",
-        "isActive": true,
-        "picture": "http://placehold.it/32x32",
-        "contact": "Heath Williamson",
-        "companyName": "PRINTSPAN",
-        "email": "heathwilliamson@printspan.com",
-        "phone": "+1 (857) 571-2199",
-        "address": "914 Orange Street, Valle, Nebraska, 1884",
-        "country": "Brazil",
-        "city": "Rutherford"
-        },
-        {
-        "_id": "5c3810997838ea82b62d67e6",
-        "isActive": false,
-        "picture": "http://placehold.it/32x32",
-        "contact": "Kathrine Floyd",
-        "companyName": "EMPIRICA",
-        "email": "kathrinefloyd@empirica.com",
-        "phone": "+1 (822) 469-3238",
-        "address": "490 Kings Place, Sisquoc, Oklahoma, 179",
-        "country": "Antigua and Barbuda",
-        "city": "Hayden"
-        }
-    ],
+  "customers" : 
+  [
+      {
+      "_id": "5c3810998d8ad23011fbd494",
+      "isActive": false,
+      "picture": "http://placehold.it/32x32",
+      "contact": "Mejia Glover",
+      "companyName": "ZILLA",
+      "email": "mejiaglover@zilla.com",
+      "phone": "+1 (972) 488-3455",
+      "address": "837 Grove Street, Bellamy, Rhode Island, 5678",
+      "country": "Uruguay",
+      "city": "Alfarata"
+      },
+      {
+      "_id": "5c381099a89608962568fccc",
+      "isActive": false,
+      "picture": "http://placehold.it/32x32",
+      "contact": "Trevino Daniels",
+      "companyName": "DELPHIDE",
+      "email": "trevinodaniels@delphide.com",
+      "phone": "+1 (933) 483-2164",
+      "address": "494 Vanderbilt Avenue, Savage, South Carolina, 5650",
+      "country": "Kyrgyzstan",
+      "city": "Stewart"
+      },
+      {
+      "_id": "5c38109946bac457f8070309",
+      "isActive": false,
+      "picture": "http://placehold.it/32x32",
+      "contact": "Ashley Wilkinson",
+      "companyName": "FLOTONIC",
+      "email": "ashleywilkinson@flotonic.com",
+      "phone": "+1 (838) 546-3183",
+      "address": "302 Heath Place, Walker, Idaho, 4346",
+      "country": "Algeria",
+      "city": "Gibsonia"
+      },
+      {
+      "_id": "5c38109912fece3e09e7f010",
+      "isActive": true,
+      "picture": "http://placehold.it/32x32",
+      "contact": "Heath Williamson",
+      "companyName": "PRINTSPAN",
+      "email": "heathwilliamson@printspan.com",
+      "phone": "+1 (857) 571-2199",
+      "address": "914 Orange Street, Valle, Nebraska, 1884",
+      "country": "Brazil",
+      "city": "Rutherford"
+      },
+      {
+      "_id": "5c3810997838ea82b62d67e6",
+      "isActive": false,
+      "picture": "http://placehold.it/32x32",
+      "contact": "Kathrine Floyd",
+      "companyName": "EMPIRICA",
+      "email": "kathrinefloyd@empirica.com",
+      "phone": "+1 (822) 469-3238",
+      "address": "490 Kings Place, Sisquoc, Oklahoma, 179",
+      "country": "Antigua and Barbuda",
+      "city": "Hayden"
+      }
+  ],
 
-    "countries":
-    [
-        {
-            "id": 1,
-            "code": "PER",
-            "name": "Perú"
-        },
-        {
-            "id": 2,
-            "code": "BRA",
-            "name": "Brazil"
-        }
-    ],
+  "countries":
+  [
+      {
+          "id": 1,
+          "code": "PER",
+          "name": "Perú"
+      },
+      {
+          "id": 2,
+          "code": "BRA",
+          "name": "Brazil"
+      }
+  ],
 
-    "quotes" :
-    [
-        {
-            "id" : 1,
-            "firstName": "Rodrigo",
-            "lastName": "Matteo",
-            "dateCreated" : "2019-01-19T03:27:16 -05:00",
-            "customerName": "ZILLA",
-            "phone": "+1 (822) 469-3238",
-            "email":"ashleywilkinson@zilla.com",
-            "address":"302 Heath Place, Walker, Idaho, 4346",
-            "country":"Brazil",
-            "city":"Stewart",
-            "state":"Lima",
-            "items": [
-                {
-                    "id": 1,
-                    "line": 1,
-                    "productNo":"100006",
-                    "productName":"2.5\" SLOTTED TRACK 20GA GALV",
-                    "quantity": 10,
-                    "unitPrice": 1,
-                    "currency": "PEN",
-                    "total":10.00
-                },
-                {
-                    "line": 2,
-                    "productNo":"100006",
-                    "productName":"2.5\" SLOTTED TRACK 20GA GALV",
-                    "quantity": 20,
-                    "unitPrice": 2,
-                    "currency": "PEN",
-                    "total":20.00
-                },
-                {
-                    "line": 3,
-                    "productNo":"100006",
-                    "productName":"2.5\" SLOTTED TRACK 20GA GALV",
-                    "quantity": 30,
-                    "unitPrice": 3,
-                    "currency": "PEN",
-                    "total":30.00
-                }
-            ]
-        },
-        {
-            "id" : 2,
-            "firstName": "Rodrigo",
-            "lastName": "Matteo",
-            "dateCreated" : "2019-01-19T03:27:16 -05:00",
-            "customerName": "ZILLA",
-            "phone": "+1 (822) 469-3238",
-            "email":"ashleywilkinson@zilla.com",
-            "address":"302 Heath Place, Walker, Idaho, 4346",
-            "country":"Brazil",
-            "city":"Stewart",
-            "state":"Lima",
-            "items": [
-                {
-                    "id": 1,
-                    "line": 1,
-                    "productNo":"100006",
-                    "productName":"2.5\" SLOTTED TRACK 20GA GALV",
-                    "quantity": 10,
-                    "unitPrice": 1,
-                    "currency": "PEN",
-                    "total":10.00
-                }
-            ]
-        }
-    ],
+  "quotes" :
+  [
+      {
+          "id" : 1,
+          "firstName": "Rodrigo Nicolas",
+          "lastName": "Matteo",
+          "dateCreated" : "2019-01-19T03:27:16 -05:00",
+          "customerName": "ZILLA",
+          "phone": "+1 (822) 469-3238",
+          "email":"ashleywilkinson@zilla.com",
+          "address":"302 Heath Place, Walker, Idaho, 4346",
+          "country":"Brazil",
+          "city":"Stewart",
+          "state":"Lima",
+          "items": [
+              {
+                  "id": 1,
+                  "line": 1,
+                  "productNo":"100006",
+                  "productName":"2.5\" SLOTTED TRACK 20GA GALV",
+                  "quantity": 10,
+                  "unitPrice": 1,
+                  "currency": "PEN",
+                  "total":10.00
+              },
+              {
+                  "line": 2,
+                  "productNo":"100006",
+                  "productName":"2.5\" SLOTTED TRACK 20GA GALV",
+                  "quantity": 20,
+                  "unitPrice": 2,
+                  "currency": "PEN",
+                  "total":20.00
+              },
+              {
+                  "line": 3,
+                  "productNo":"100006",
+                  "productName":"2.5\" SLOTTED TRACK 20GA GALV",
+                  "quantity": 30,
+                  "unitPrice": 3,
+                  "currency": "PEN",
+                  "total":30.00
+              }
+          ]
+      },
+      {
+          "id" : 2,
+          "firstName": "Rodrigo",
+          "lastName": "Matteo",
+          "dateCreated" : "2019-01-19T03:27:16 -05:00",
+          "customerName": "ZILLA",
+          "phone": "+1 (822) 469-3238",
+          "email":"ashleywilkinson@zilla.com",
+          "address":"302 Heath Place, Walker, Idaho, 4346",
+          "country":"Brazil",
+          "city":"Stewart",
+          "state":"Lima",
+          "items": [
+              {
+                  "id": 1,
+                  "line": 1,
+                  "productNo":"100006",
+                  "productName":"2.5\" SLOTTED TRACK 20GA GALV",
+                  "quantity": 10,
+                  "unitPrice": 1,
+                  "currency": "PEN",
+                  "total":10.00
+              }
+          ]
+      }
+  ],
 
-    "sales" :
-    [
-        {
-            "id": 1,
-            "billingType": "Factura",
-            "documentNo": "F001-1",
-            "customerName": "ZILLA",
-            "description": "loremp impsum",
-            "documentDate":"13/01/2019",
-            "documentDue":"15/01/2019",
-            "term":"Contado",
-            "currency":"PEN",
-            "items": [
-                {
-                    "line": 1,
-                    "productNo":"100006",
-                    "productName":"2.5\" SLOTTED TRACK 20GA GALV",
-                    "quantity": 10,
-                    "unitPrice": 1,
-                    "currency": "PEN",
-                    "total":10.00
-                },
-                {
-                    "line": 2,
-                    "productNo":"100006",
-                    "productName":"2.5\" SLOTTED TRACK 20GA GALV",
-                    "quantity": 20,
-                    "unitPrice": 2,
-                    "currency": "PEN",
-                    "total":20.00
-                }
-            ]
-        }
-    ]
+  "sales" :
+  [
+      {
+          "id": 1,
+          "billingType": "Factura",
+          "documentNo": "F001-1",
+          "customerName": "ZILLA",
+          "description": "loremp impsum",
+          "documentDate":"13/01/2019",
+          "documentDue":"15/01/2019",
+          "term":"Contado",
+          "currency":"PEN",
+          "items": [
+              {
+                  "line": 1,
+                  "productNo":"100006",
+                  "productName":"2.5\" SLOTTED TRACK 20GA GALV",
+                  "quantity": 10,
+                  "unitPrice": 1,
+                  "currency": "PEN",
+                  "total":10.00
+              },
+              {
+                  "line": 2,
+                  "productNo":"100006",
+                  "productName":"2.5\" SLOTTED TRACK 20GA GALV",
+                  "quantity": 20,
+                  "unitPrice": 2,
+                  "currency": "PEN",
+                  "total":20.00
+              }
+          ]
+      }
+  ]
 }
