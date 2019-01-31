@@ -1,7 +1,7 @@
 import { DataService } from './../services/data.service';
 import { Component, OnInit, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import { Quote } from '../models/quote';
-import { Router } from '@angular/router'; 
+import { Router, ActivatedRoute } from '@angular/router'; 
 
 @Component({
   selector: 'app-quotes',
@@ -16,7 +16,8 @@ export class QuotesComponent implements OnInit {
 
   constructor(
     private dataService : DataService,
-    private router : Router
+    private router : Router,
+    private route: ActivatedRoute
   ) { 
     this.quote = new Quote();
     this.quote.addLine(1);
@@ -27,7 +28,8 @@ export class QuotesComponent implements OnInit {
 
   ngOnInit() {
     if(!this.isNew){
-      this.getQuote(1);
+      const id = +this.route.snapshot.paramMap.get('id');      
+      this.getQuote(id);
     }
   }
 
