@@ -14,16 +14,14 @@
         <div class="row">
         <div class="col-md-6 mb-3">
           <label for="firstName">Nombre</label>
-          <div><span *ngIf="!isEdit">{{quote.firstName}}</span></div>
-          <input type="text" class="form-control" id="firstName" name="firstName" [(ngModel)]="quote.firstName" #fName #name="ngModel" required />
+          <input type="text" [ngClass]="{'form-control': isNew, 'form-control-plaintext': !isNew}" id="firstName" name="firstName" [(ngModel)]="quote.firstName" #fName #name="ngModel" required />
           <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
             <div *ngIf="name.errors.required">Por favor ingrese el nombre.</div>
           </div>
         </div>
         <div class="col-md-6 mb-3">
           <label for="lastName">Apellidos</label>
-          <div><span *ngIf="!isEdit">{{quote.lastName}}</span></div>
-          <input type="text" *ngIf="isEdit" [(ngModel)]="quote.lastName" class="form-control" id="lastName" name="lastName" placeholder="" value="" >
+          <input type="text" [ngClass]="{'form-control': isNew, 'form-control-plaintext': !isNew}" [(ngModel)]="quote.lastName" id="lastName" name="lastName" />
           <div class="invalid-feedback">
             Por favor ingrese los apellidos.
           </div>
@@ -33,8 +31,7 @@
       <div class="row">
         <div class="col-md-12 mb-3">
           <label for="customer">Cliente / Organizaci&oacute;n</label>
-          <div><span *ngIf="!isEdit">{{quote.customerName}}</span></div>
-          <input type="text" *ngIf="isEdit" [(ngModel)]="quote.customerName" class="form-control" id="customer" name="customer" placeholder="" value="" >
+          <input type="text" [ngClass]="{'form-control': isNew, 'form-control-plaintext': !isNew}" [(ngModel)]="quote.customerName" id="customer" name="customer" />
           <div class="invalid-feedback">
             Por favor ingrese un cliente.
           </div>
@@ -44,16 +41,14 @@
       <div class="row">
         <div class="col-md-6 mb-3">
           <label for="phone">Teléfono</label>
-          <div><span *ngIf="!isEdit">{{quote.phone}}</span></div>
-          <input type="text" *ngIf="isEdit" [(ngModel)]="quote.phone" class="form-control" id="phone" name="phone" placeholder="51 1 2568754" value="" >
+          <input type="text" [ngClass]="{'form-control': isNew, 'form-control-plaintext': !isNew}" [(ngModel)]="quote.phone"  id="phone" name="phone" placeholder="51 1 2568754" />
           <div class="invalid-feedback">
             Por favor ingrese un teléfono válido.
           </div>
         </div>
         <div class="col-md-6 mb-3">
           <label for="email">Correo Electr&oacute;nico <span class="text-muted">(Opcional)</span></label>
-          <div><span *ngIf="!isEdit">{{quote.email}}</span></div>
-          <input type="email" *ngIf="isEdit" [(ngModel)]="quote.email" class="form-control" id="email" name="email" placeholder="you@example.com">
+          <input type="email" [ngClass]="{'form-control': isNew, 'form-control-plaintext': !isNew}" [(ngModel)]="quote.email" id="email" name="email" placeholder="you@example.com" />
           <div class="invalid-feedback">
             Por favor ingrese una dirección de correo electr&oacute;nico válida para alertas de envío.
           </div>
@@ -65,8 +60,7 @@
 
       <div class="mb-3">
         <label for="address">Direcci&oacute;n - linea 1</label>
-        <div><span *ngIf="!isEdit">{{quote.address}}</span></div>
-        <input type="text" *ngIf="isEdit" [(ngModel)]="quote.address" class="form-control" id="address" name="address" placeholder="1234 Calle Principal" >
+        <input type="text" [ngClass]="{'form-control': isNew, 'form-control-plaintext': !isNew}" [(ngModel)]="quote.address" id="address" name="address" placeholder="1234 Calle Principal" />
         <div class="invalid-feedback">
           Por favor ingrese una direcci&oacute;n de envío.
         </div>
@@ -74,7 +68,7 @@
 
       <div class="mb-3">
         <label for="address2">Direcci&oacute;n - linea 2 <span class="text-muted">(Opcional)</span></label>
-        <input type="text" *ngIf="isEdit" class="form-control" id="address2" placeholder="Nro de departamento o interior">
+        <input type="text" *ngIf="isEdit" class="form-control" id="address2" placeholder="Nro de departamento o interior" />
       </div>
 
       <div class="row">
@@ -146,20 +140,16 @@
               <tr>
                   <td>{{item.line}}</td>
                   <td>
-                    <div><span *ngIf="!isEdit">{{item.productNo}}</span></div>
-                    <input type="text" *ngIf="isEdit" [(ngModel)]="item.productNo" class="form-control" id="productNo" name="productNo" >
+                    <input type="text" [ngClass]="{'form-control': isNew, 'form-control-plaintext': !isNew}" [(ngModel)]="item.productNo" id="productNo" name="productNo" />
                   </td>
                   <td class="text-right">
-                    <div><span *ngIf="!isEdit">{{item.quantity}}</span></div>
-                    <input type="text" *ngIf="isEdit" [(ngModel)]="item.quantity" class="form-control text-right" id="quantity" name="quantity" >
+                    <input type="text" [ngClass]="{'text-right': true, 'form-control': isNew, 'form-control-plaintext': !isNew}" [(ngModel)]="item.quantity"  id="quantity" name="quantity" />
                   </td>
                   <td class="text-right">
-                    <div><span *ngIf="!isEdit">{{item.unitPrice}}</span></div>
-                    <input type="text" *ngIf="isEdit" [(ngModel)]="item.unitPrice" class="form-control text-right" id="unitPrice" name="unitPrice" >
+                    <input type="text" [ngClass]="{'text-right': true, 'form-control': isNew, 'form-control-plaintext': !isNew}" [(ngModel)]="item.unitPrice" id="unitPrice" name="unitPrice" />
                   </td>
                   <td>
-                    <div><span *ngIf="!isEdit">{{item.currency}}</span></div>
-                    <input type="text" *ngIf="isEdit" [(ngModel)]="item.currency" class="form-control" id="currency" name="currency" >
+                    <input type="text" [ngClass]="{'form-control ': isNew, 'form-control-plaintext': !isNew}" [(ngModel)]="item.currency" id="currency" name="currency" >
                   </td>
                   <td class="text-right">{{item.total}}</td>
                 </tr>

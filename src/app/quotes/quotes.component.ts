@@ -32,7 +32,9 @@ export class QuotesComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    setTimeout(() => this.fName.nativeElement.focus());
+    if(this.isNew){
+      setTimeout(() => this.fName.nativeElement.focus());
+    }
   }
 
   cancelQuote(){
