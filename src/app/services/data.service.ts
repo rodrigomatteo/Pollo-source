@@ -7,13 +7,13 @@ import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { Quote } from './../models/quote';
 import { Sale } from './../models/sale';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
-  url = "http://almagesto-server.azurewebsites.net/";
-  //url = "http://localhost:3000/";
+  url = environment.apiUrl;
   
   constructor(private http: HttpClient) { }
 
